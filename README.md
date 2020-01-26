@@ -1,5 +1,5 @@
 # GloAcademy
-Публикация работ по заданиям с `[Glo Academy](https://glo-academy.ru/)`
+Публикация работ по заданиям с [Glo Academy](https://glo-academy.ru/)
 
 ## Урок №1
 [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson01/lesson01)
