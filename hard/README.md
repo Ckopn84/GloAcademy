@@ -10,6 +10,7 @@
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson02)
 
 ### Урок №3
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson03)
 
 ### Урок №4
 
