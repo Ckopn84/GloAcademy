@@ -13,7 +13,7 @@ const foo = (arg) => {
         const maxLength = 30;
         const str = arg.trim();
         if (str.length > maxLength) {
-            res = str.slice(maxLength) + '...';
+            res = str.substr(0,maxLength) + '...';
         } else {
             res = str;
         }
