@@ -30,3 +30,9 @@
 [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson06/lesson06)
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson06)
+
+## Урок №7
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson07/lesson07)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson07)
+
