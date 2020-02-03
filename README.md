@@ -36,3 +36,6 @@
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson07)
 
+## Урок №8
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson08/lesson08)
+
