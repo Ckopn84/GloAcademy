@@ -27,6 +27,7 @@
 ### Урок №8
 
 ### Урок №9
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson09)
 
 ### Урок №10
 
