@@ -55,3 +55,8 @@
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson11)
 
+[Бонусное задание к уроку 11](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson11bonus)
+
+## Урок №12
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson12/lesson12)
+
