@@ -30,8 +30,10 @@
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson09)
 
 ### Урок №10
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson10)
 
 ### Урок №11
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson11)
 
 ### Урок №12
 
