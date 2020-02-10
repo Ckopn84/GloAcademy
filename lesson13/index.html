@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>ToDo</title>
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+	<form class="todo-control">
+		<label><input class="header-input" type="text" placeholder="Какие планы?"></label>
+		<button class="header-button" id="add"></button>
+	</form>
+</header>
+
+<div class="container">
+
+	<ul class="todo" id="todo">
+		<li class="todo-item">
+			Помыть окна
+			<div class="todo-buttons">
+				<button class="todo-remove"></button>
+				<button class="todo-complete"></button>
+			</div>
+		</li>
+	</ul>
+	<ul class="todo todo-completed" id="completed">
+		<li class="todo-item">
+			Помыть окна
+			<div class="todo-buttons">
+				<button class="todo-remove"></button>
+				<button class="todo-complete"></button>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
