@@ -57,3 +57,14 @@
 
 [Бонусное задание к уроку 11](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson11bonus)
 
+## Урок №12
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson12/lesson12)
+
+## Урок №13
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson13/lesson13)
+
+## Урок №14
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson14/lesson14)
+[Материалы основного задания # 2](https://github.com/Ckopn84/GloAcademy/tree/lesson14_2/lesson14_2)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson14)

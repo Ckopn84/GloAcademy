@@ -35,11 +35,10 @@
 ### Урок №11
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson11)
 
-### Урок №12
-
-### Урок №13
+[Материалы дополнительного задания (бонус)](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson11bonus)
 
 ### Урок №14
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson14)
 
 ### Урок №15
 
