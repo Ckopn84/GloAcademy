@@ -41,6 +41,7 @@
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson14)
 
 ### Урок №15
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson15)
 
 ### Урок №16
 
