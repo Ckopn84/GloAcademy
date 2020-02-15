@@ -47,7 +47,7 @@
 ## Урок №10
 [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson10/lesson10)
 
-[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson10)
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson10) | 
 [Материалы дополнительного задания на codepen.io](https://codepen.io/ckopn84/pen/vYOBVjw)
 
 ## Урок №11
@@ -64,7 +64,12 @@
 [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson13/lesson13)
 
 ## Урок №14
-[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson14/lesson14)
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson14/lesson14) | 
 [Материалы основного задания # 2](https://github.com/Ckopn84/GloAcademy/tree/lesson14_2/lesson14_2)
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson14)
+
+## Урок №15
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson15/lesson15)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson15)
