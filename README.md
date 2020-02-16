@@ -73,3 +73,10 @@
 [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson15/lesson15)
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson15)
+
+## Урок №16
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson16/lesson16) | 
+[Материалы основного задания # 2](https://github.com/Ckopn84/GloAcademy/tree/lesson16_2/lesson16_2)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson16)
+
