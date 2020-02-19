@@ -2,63 +2,83 @@
 
 /*
 
-    Задания по уроку №14
+    Задания по уроку №17 п.2
 
 */
 
 /*
-1) Сделать класс DomElement, который
-   содержит свойства
-  - selector, 
-  - height, 
-  - width, 
-  - bg, 
-  - fontSize
-содержит метод, который создает элемент на странице в зависимости от условия:  
-- если строка selector начинается с точки, создаем div с классом
-- если строка selector  начинается с решетки # то создаем параграф с id
-пример:
-если передана строка '.block', то функция конструктор создает элемент с class="block"
-если передана строка '#best', то функция конструктор создает элемент с id =best"
-с помощью cssText задавать стили: 
-  - высотой - height,
-  - шириной - width, 
-  - background - bg
-  - размер текста fontSize 
-внутрь созданного блока записывать любой текст. Метод записи может быть любым.
-2) Создать новый объект на основе класса DomElement
-3) Вызвать его метод чтобы получить элемент на странице
+Написать любую анимацию, используя requestAnimationFrame и кнопку, активирующую её
+Кнопка должна ставить анимацию на паузу и продолжать анимацию после повторного нажатия + 
+Добавить кнопку reset, которая будет возвращать анимацию в первоначальное состояние
 */
 
-function DomElement (selector, height, width, bg, fontSize) {
-    this.selector = selector;
-    this.height = height;
-    this.width = width;
-    this.bg = bg;
-    this.fontSize = fontSize;
-}
+document.body.style.backgroundColor = '';
 
-DomElement.prototype.newElem = function () {
-    let elem;
-    if (this.selector[0] === '.') {
-        elem = document.createElement('div');
-        elem.className = this.selector.slice(1);
+const btnStart = document.createElement('button'),
+    btnReset = document.createElement('button'),
+    divImg = document.createElement('div'),
+    img = document.createElement('img'),
+    div = document.createElement('div'),
+    imgGoose = document.createElement('img');
+let flyInterval = 0;
+
+const resetCanvas = () => {
+    if (flyInterval > 0) {
+        cancelAnimationFrame(flyInterval);
     }
-    if (this.selector[0] === '#') {
-        elem = document.createElement('p');
-        elem.id = this.selector.slice(1);
-        // elem.textContent = 'Тестовая запись';
-    }
-    elem.style.cssText = `height: ${this.height}px;
-        width: ${this.width}px;
-        background: ${this.bg};
-        font-size: ${this.fontSize}px;`;
-    // console.log(elem);
-    return elem;
+    div.style.left = (window.innerWidth) + 'px';
+    div.style.top = (window.innerHeight - img.height) + 'px';
+    divImg.style.left = '1px';
+    divImg.style.top = '5px';
+    btnStart.textContent = 'Start';
 };
 
-let elDiv = new DomElement('.block', 100, 200, 'green', 12);
-let elParagraph = new DomElement('#best', 150, 400, 'red', 12);
+const flyAnimate = () => {
+    const l = parseFloat(divImg.style.left),
+        lm = parseFloat(div.style.left);
+    if (l < window.innerWidth) {
+        if (l > (window.innerWidth / 4) && lm > -img.width) {
+            div.style.left = (lm - 3) + 'px';
+        }
+        divImg.style.left = (l + 1) + 'px';
+        flyInterval = requestAnimationFrame(flyAnimate);
+    } else {
+        cancelAnimationFrame(flyInterval);
+        btnStart.textContent = 'Stoped';
+        alert('Спасибо за внимание! Для повтора нажмите "Reset"');
+    }
+};
 
-document.body.appendChild(elDiv.newElem());
-document.body.appendChild(elParagraph.newElem());
+const startAnimation = () => {
+    if (btnStart.textContent === 'Start') {
+        btnStart.textContent = 'Pause';
+        flyInterval = requestAnimationFrame(flyAnimate);
+    } else if (btnStart.textContent !== 'Stoped') {
+        btnStart.textContent = 'Start';
+        cancelAnimationFrame(flyInterval);
+    }
+};
+
+btnStart.textContent = 'Start';
+btnReset.textContent = 'Reset';
+img.src = './img/mazda.png';
+img.width = '110';
+// img.height = '62';
+imgGoose.src = './img/tHi.gif';
+imgGoose.width = '110';
+div.style.position = 'relative';
+divImg.style.position = 'relative';
+
+divImg.appendChild(imgGoose);
+div.appendChild(img);
+
+btnStart.addEventListener('click', startAnimation);
+btnReset.addEventListener('click', resetCanvas);
+
+resetCanvas();
+
+document.body.appendChild(btnStart);
+document.body.appendChild(btnReset);
+document.body.appendChild(divImg);
+document.body.appendChild(div);
+
