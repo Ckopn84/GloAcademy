@@ -26,8 +26,8 @@ const resetCanvas = () => {
     if (flyInterval > 0) {
         cancelAnimationFrame(flyInterval);
     }
-    div.style.left = (window.innerWidth) + 'px';
-    div.style.top = (window.innerHeight - img.height) + 'px';
+    div.style.left = (document.body.clientWidth) + 'px';
+    // div.style.top = (document.body.clientHeight - img.height) + 'px';
     divImg.style.left = '1px';
     divImg.style.top = '5px';
     btnStart.textContent = 'Start';
@@ -75,10 +75,9 @@ div.appendChild(img);
 btnStart.addEventListener('click', startAnimation);
 btnReset.addEventListener('click', resetCanvas);
 
-resetCanvas();
-
 document.body.appendChild(btnStart);
 document.body.appendChild(btnReset);
 document.body.appendChild(divImg);
 document.body.appendChild(div);
 
+resetCanvas();
