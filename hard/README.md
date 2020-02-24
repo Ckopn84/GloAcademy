@@ -52,6 +52,7 @@
 [Материалы дополнительного задания п.2](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson17p2)
 
 ### Урок №18
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson18)
 
 ### Урок №19
 
