@@ -101,7 +101,11 @@
 [Решение по бонусному заданию](https://codepen.io/ckopn84/pen/eYNzxzM)
 
 ## Урок №18
-[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson18/lesson18) | 
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson18/lesson18)
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson18)
 
+## Урок №19
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson19/lesson19)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson19)
