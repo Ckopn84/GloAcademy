@@ -54,8 +54,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		idInterval = setInterval(updateClock, 1000);
 	};
 
-	countTimer('20 Feb 2020');
-
 	const animateScroll = () => {
 
 		const target = event.target.closest('[href^="#"]'),
@@ -63,7 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		if (target) {
 			const pageY = window.pageYOffset,
-				hash = target.href.replace(/[^#]*(.*)/, '$1'),
+				hash = target.href.replace(/[^#]+(.*)/, '$1'),
 				distTopPosition = document.querySelector(hash).getBoundingClientRect().top;
 
 			let start = 0;
@@ -112,8 +110,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		document.body.addEventListener('click', handlerMenu);
 	};
-
-	toggleMenu();
 
 	//popup
 	const togglePopUp = () => {
@@ -167,8 +163,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 	};
 
-	togglePopUp();
-
 	document.querySelector('main a').addEventListener('click', animateScroll);
 
 	// tabs
@@ -202,12 +196,10 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 	};
 
-	tabs();
-
 	// slider
 	const slider = () => {
 		const slide = document.querySelectorAll('.portfolio-item'),
-			btn = document.querySelectorAll('.portfolio-btn'),
+			// btn = document.querySelectorAll('.portfolio-btn'),
 			dot = document.querySelectorAll('.dot'),
 			slider = document.querySelector('.portfolio-content');
 
@@ -282,5 +274,24 @@ window.addEventListener('DOMContentLoaded', () => {
 		startSlide();
 	};
 
+	// add point dot
+	const addDot = () => {
+		const portfolioItem = document.querySelectorAll('.portfolio-item'),
+			portfolioDots = document.querySelector('.portfolio-dots');
+
+		portfolioItem.forEach(() => {
+			const dot = document.createElement('li');
+			dot.classList.add('dot');
+			portfolioDots.appendChild(dot);
+		});
+
+		portfolioDots.children[0].classList.add('dot-active');
+	};
+
+	countTimer('20 Feb 2020');
+	toggleMenu();
+	togglePopUp();
+	tabs();
+	addDot();
 	slider();
 });
