@@ -109,3 +109,9 @@
 [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson19/lesson19)
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson19)
+
+
+## Урок №20
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson20/lesson20)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson20)
