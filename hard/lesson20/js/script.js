@@ -11,7 +11,7 @@ const isPalindrome = str => {
     return str === strRevers;
 };
 
-const searchPalinfrome = str => {
+const searchPalindrome = str => {
     let result = '';
     for (let i = str.length; i > 1 && !result; i--) {
         for (let j = 0; j <= str.length - i && !result; j++) {
@@ -21,5 +21,5 @@ const searchPalinfrome = str => {
     return result;
 };
 
-console.log(searchPalinfrome('fffkffgffkfdk'));
-console.log(searchPalinfrome('абвгоогвфф'));
+console.log(searchPalindrome('fffkffgffkfdk'));
+console.log(searchPalindrome('абвгоогвфф'));
