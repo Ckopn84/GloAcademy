@@ -61,8 +61,11 @@
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson20)
 
 ### Урок №21
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson21) | 
+[Codepen](https://codepen.io/ckopn84/pen/oNXZJmB)
 
 ### Урок №22
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson22)
 
 ### Урок №23
 

@@ -111,7 +111,20 @@
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson19)
 
 
-## Урок №19
+## Урок №20
 [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson20/lesson20)
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson20)
+
+## Урок №21
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson21/lesson21)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson21) | 
+[Codepen](https://codepen.io/ckopn84/pen/oNXZJmB)
+
+## Урок №22
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson22/lesson22)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson22)
+
+
