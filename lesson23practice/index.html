@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Tasks</title>
+
+	<style>
+		input {
+			display: block
+		}
+	</style>
+
+</head>
+
+<body>
+	<section>
+		<form id="myform">
+			<label for="phone">phone</label>
+			<input type="text" id="phone" name="phone" placeholder="phone">
+			<label for="email">email</label>
+			<input type="text" id="email" name="email" placeholder="email">
+			<br>
+			<button type="submit">submit</button>
+			<button type="reset">reset</button>
+		</form>
+	</section>
+	<script src="./assets/validator.js"></script>
+	<!-- <script src="./js/script.js" defer></script> -->
+	<script>
+		const valid = new Validator({
+			selector: '#myform',
+			pattern: {
+				phone: /^\+380\d{7}$/,
+				zip: /\d{5,6}/
+			},
+			method: {
+				'phone': [
+					['notEmpty'],
+					['pattern', 'phone']
+				],
+				'email': [
+					['notEmpty'],
+					['pattern', 'email']
+				]
+			}
+		});
+
+		valid.init();
+	</script>
+</body>
+
+</html>
