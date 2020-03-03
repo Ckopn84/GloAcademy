@@ -127,4 +127,8 @@
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson22)
 
+## Урок №22
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson23/lesson23)
+
+[Материалы практики](https://github.com/Ckopn84/GloAcademy/tree/lesson23/lesson23practice)
 
