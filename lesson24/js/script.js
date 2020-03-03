@@ -383,36 +383,39 @@ window.addEventListener('DOMContentLoaded', () => {
 		const form = document.getElementById('form1');
 		const statusMessage = document.createElement('div');
 
-		// statusMessage.textContent = 'Тут будет сообщение!';
-		statusMessage.style.cssText = 'font-size: 2rem;';
-		// form.appendChild(statusMessage);
-
-		form.addEventListener('submit', event => {
-			event.preventDefault();
-			form.appendChild(statusMessage);
-
+		const postData = (body, outputData, errorData) => {
 			const request = new XMLHttpRequest();
 
 			request.addEventListener('readystatechange', () => {
-				statusMessage.textContent = loadMessage;
-
 				if (request.readyState !== 4) {
 					return;
 				}
 
 				if (request.status === 200) {
-					statusMessage.textContent = successMessage;
+					outputData();
 				} else {
-					statusMessage.textContent = errorMessage;
+					errorData(request.status);
 				}
 			});
 
 			request.open('POST', './server.php');
 			// request.setRequestHeader('Content-Type', 'multipart/form-data');
 			request.setRequestHeader('Content-Type', 'application/json');
+			// request.send(formData);
+			request.send(JSON.stringify(body));
+		};
 
+		// statusMessage.textContent = 'Тут будет сообщение!';
+		statusMessage.style.cssText = 'font-size: 2rem;';
+		// form.appendChild(statusMessage);
+
+		form.addEventListener('submit', event => {
 			const formData = new FormData(form);
 			const body = {};
+
+			statusMessage.textContent = loadMessage;
+			event.preventDefault();
+			form.appendChild(statusMessage);
 
 			/* for (let val of formData.entries()) {
 				body[val[0]] = val[1];
@@ -422,8 +425,12 @@ window.addEventListener('DOMContentLoaded', () => {
 				body[key] = val;
 			});
 
-			// request.send(formData);
-			request.send(JSON.stringify(body));
+			postData(body, () => {
+				statusMessage.textContent = successMessage;
+			}, error => {
+				statusMessage.textContent = errorMessage;
+				console.error(error);
+			});
 		});
 	};
 
