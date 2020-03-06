@@ -25,21 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let newHeroes = {};
 
-	const addMovies = () => {
-		const allMovies = [];
-
-		newHeroes.forEach(hero => hero.movies.forEach(movie => {
-			if (allMovies.indexOf(movie) < 0) allMovies.push(movie);
-		}));
-
-		allMovies.sort().forEach(movie => {
-			const option = document.createElement('option');
-
-			option.value = option.textContent = movie;
-			filter.appendChild(option);
-		});
-	};
-
 	class Hero {
 		constructor(elem) {
 			this.name = elem.name ? elem.name : '';
@@ -102,11 +87,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			if (this.movies.length > 0) {
 				moviesAbout.innerHTML = '<b>Movies:</b> ';
+
 				this.movies.forEach(elem => {
 					const listItem = document.createElement('li');
+
 					listItem.textContent = elem;
+
 					movies.appendChild(listItem);
 				});
+
 				data.appendChild(moviesAbout);
 				data.appendChild(movies);
 			}
@@ -115,9 +104,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		checkMovie(filter = '') {
-			return filter === '' ? true : this.movies.filter(movie => movie === filter).length > 0;
+			return filter === '' ? true :
+				this.movies.filter(movie => movie === filter).length > 0;
 		}
 	}
+
+	const appendHeroesCard = (movie = '') => newHeroes
+		.filter(hero => hero.checkMovie(movie))
+		.forEach(hero => section.appendChild(hero.newCard()));
+
+	const addMovies = () => {
+		const allMovies = [];
+
+		newHeroes.forEach(hero => hero.movies.forEach(movie => {
+			if (allMovies.indexOf(movie) < 0) allMovies.push(movie);
+		}));
+
+		allMovies.sort().forEach(movie => {
+			const option = document.createElement('option');
+
+			option.value = movie;
+			option.textContent = movie;
+
+			filter.appendChild(option);
+		});
+	};
 
 	const getHeroes = callback => {
 		const request = new XMLHttpRequest();
@@ -126,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		request.addEventListener('readystatechange', () => {
 			if (request.readyState !== 4) return;
+
 			if (request.status === 200) {
 				callback(JSON.parse(request.responseText));
 			} else {
@@ -138,14 +150,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	getHeroes(heroes => {
 		newHeroes = heroes.map(item => new Hero(item));
-		newHeroes.filter(hero => hero.checkMovie()).forEach(hero => section.appendChild(hero.newCard()));
+
+		appendHeroesCard();
 		addMovies();
 	});
 
 	filter.addEventListener('change', () => {
 		section.textContent = '';
-		newHeroes
-			.filter(hero => hero.checkMovie(event.target.value))
-			.forEach(hero => section.appendChild(hero.newCard()));
+
+		appendHeroesCard(event.target.value);
 	});
 });
