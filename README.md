@@ -140,3 +140,10 @@
 ## КОНКУРС ЛУЧШИХ РАБОТ
 [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/competitionForBestWork/competitionForBestWork)
 
+## Урок №25
+[Материалы практики](https://github.com/Ckopn84/GloAcademy/tree/lesson25practice/lesson25practice)
+
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson25/lesson25)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson25)
+
