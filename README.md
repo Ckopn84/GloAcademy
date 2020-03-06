@@ -137,3 +137,6 @@
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson24)
 
+## КОНКУРС ЛУЧШИХ РАБОТ
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/competitionForBestWork/competitionForBestWork)
+
