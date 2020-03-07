@@ -385,7 +385,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify(Object.fromEntries(body))
+			body: JSON.stringify(body)
 		});
 		/* new Promise((resolve, reject) => {
 			const request = new XMLHttpRequest();
@@ -478,7 +478,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				}); */
 
 				// postData(body)
-				postData(new FormData(form))
+				postData(Object.fromEntries(new FormData(form)))
 					.then(response => {
 						if (response.status !== 200) throw new Error(`Status network ${request.status}`);
 						showStatus('success');
