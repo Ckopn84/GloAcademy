@@ -57,4 +57,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#webpack
+node_modules/
+/src/
+
 # End of https://www.gitignore.io/api/osx,windows
