@@ -127,4 +127,28 @@
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson22)
 
+## Урок №23
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson23/lesson23)
+
+[Материалы практики](https://github.com/Ckopn84/GloAcademy/tree/lesson23/lesson23practice)
+
+## Урок №24
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson24/lesson24)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson24)
+
+## КОНКУРС ЛУЧШИХ РАБОТ
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/competitionForBestWork/competitionForBestWork)
+
+## Урок №25
+[Материалы практики](https://github.com/Ckopn84/GloAcademy/tree/lesson25practice/lesson25practice)
+
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson25/lesson25)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson25)
+
+## Урок №26
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson26/lesson26)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson26)
 

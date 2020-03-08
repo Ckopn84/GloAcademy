@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Tasks</title>
+	<style>
+		.text {
+			padding: 1px 10px 5px 10px;
+			width: 50%;
+		}
+		textarea {
+			width: 100%;
+		}
+		h1 {
+			text-align: center;
+		}
+		h4 {
+			text-align: right;
+			padding: 1px 20px 1px 2px;
+			margin: 1px 1px 1px 1px;
+		}
+		h3 {
+			margin: 5px 5px 3px 5px;
+			width: 50%; 
+		}
+		select {
+			/* text-align: right; */
+			margin: 5px 5px 3px 5px;
+			width: 50%; 
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Переводчик от Яндекс</h1>
+	<h4><a href="http://translate.yandex.ru">Переведено сервисом «Яндекс.Переводчик»</a></h4>
+	<div style="display: flex; ">
+		<div id="text_input" class="text">
+			<div style="display: flex; ">
+				<h3>Текст для перевода:</h3>
+				<select name="lang-input" id="lang-input" class="lang-input"></select>
+			</div>
+			<textarea name="input" id="input" cols="30" rows="10" placeholder="Введите текст"></textarea>
+		</div>
+		<div id="text_output" class="text">
+			<div style="display: flex; ">
+				<h3>Результат перевода:</h3>
+				<select name="lang-output" id="lang-output" class="lang-output"></select>
+			</div>
+			<textarea name="output" id="output" cols="30" rows="10" disabled></textarea>
+		</div>
+	</div>
+	<h4><a href="http://translate.yandex.ru">Переведено сервисом «Яндекс.Переводчик»</a></h4>
+	<script src="./js/script.js" defer></script>
+</body>
+
+</html>
