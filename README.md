@@ -152,3 +152,8 @@
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson26)
 
+## Урок №27
+[Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson27/lesson27)
+
+[Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson27)
+
