@@ -7,24 +7,23 @@ import tabs from './modules/tabs';
 import addDot from './modules/addDot';
 import setCommandImg from './modules/setCommandImg';
 import calc from './modules/calc';
-import checkCalcBlock from './modules/checkCalcBlock';
 import slider from './modules/slider';
 import sendForm from './modules/sendForm';
 
 // Timer
 countTimer('20 Feb 2020');
-// Меню
+// Menu
 toggleMenu();
-//popup
+// popup
 togglePopUp();
 // tabs
 tabs();
 // add point dot
 addDot();
+// change the team photo
 setCommandImg();
-// калькулятор
+// cost calculator
 calc(100);
-checkCalcBlock();
 // slider
 slider();
 // send-ajax-form

@@ -56,6 +56,12 @@ const calc = (price = 100) => {
 			countSum();
 		}
 	});
+
+	calcBlock.addEventListener('input', () => {
+		if (event.target.type === 'number') {
+			event.target.value = event.target.value.replace(/\D/g, '');
+		}
+	});
 };
 
 export default calc;

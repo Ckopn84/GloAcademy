@@ -37,7 +37,7 @@ const toggleMenu = () => {
 
 		if (target.closest('.menu') ||
 			(!target.closest('menu') &&
-				document.querySelector('menu').classList.contains('active-menu'))) {
+			document.querySelector('menu').classList.contains('active-menu'))) {
 			displayMenu();
 		} else if (target.closest('menu') && target.closest('[href^="#"]')) {
 			displayMenu();

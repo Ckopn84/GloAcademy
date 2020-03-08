@@ -8,9 +8,7 @@ const sendForm = () => {
 		body: JSON.stringify(body)
 	});
 
-	const clearInput = idForm => {
-		const form = document.getElementById(idForm);
-
+	const clearInput = form => {
 		[...form.elements]
 			.filter(item =>
 				item.tagName.toLowerCase() !== 'button' &&
@@ -54,6 +52,7 @@ const sendForm = () => {
 					img: './images/message/OK.png'
 				}
 			};
+
 			statusMessage.textContent = statusList[status].message;
 			img.src = statusList[status].img;
 			img.height = 50;
@@ -73,11 +72,13 @@ const sendForm = () => {
 			postData(Object.fromEntries(new FormData(form)))
 				.then(response => {
 					if (response.status !== 200) throw new Error(`Status network ${request.status}`);
+
 					showStatus('success');
-					clearInput(idForm);
+					clearInput(form);
 				})
 				.catch(error => {
 					showStatus('error');
+
 					console.error(error);
 				});
 		});
