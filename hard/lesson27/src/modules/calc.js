@@ -53,8 +53,9 @@ const calc = (price = 100) => {
 
 		if (!!typeValue && !!squareValue) {
 			total = price * typeValue * squareValue * counrValue * dayValue;
-			animatedCalc({ total });
 		}
+
+		animatedCalc({ total });
 	};
 
 	calcBlock.addEventListener('change', event => {

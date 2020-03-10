@@ -5,6 +5,11 @@ const countTimer = dedline => {
 		timerSecunds = document.querySelector('#timer-seconds');
 	let idInterval = 0;
 
+	dedline = new Date(dedline);
+	while (dedline < new Date()) {
+		dedline.setDate(dedline.getDate() + 1);
+	}
+
 	const getTimeRemaining = () => {
 		const dateStop = new Date(dedline).getTime(),
 			dateNow = new Date().getTime(),
@@ -44,8 +49,6 @@ const countTimer = dedline => {
 
 		if (timer.timeRemaining < 0) {
 			clearInterval(idInterval);
-			const dateStop = new Date(dedline);
-			dateStop.setDate(dateStop.getDate() + 1);
 			countTimer(dateStop);
 		}
 	};

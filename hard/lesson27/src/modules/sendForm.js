@@ -5,7 +5,7 @@ const sendForm = () => {
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		body
+		body: JSON.stringify(body)
 	});
 
 	const clearInput = form => {
@@ -74,12 +74,18 @@ const sendForm = () => {
 		statusMessage.style.cssText = 'font-size: 2rem; color: #fff';
 
 		form.addEventListener('submit', event => {
+			const formData = new FormData(form);
+			const body = {};
 
 			event.preventDefault();
 
 			showStatus('load');
 
 			form.appendChild(statusMessage);
+
+			formData.forEach((val, key) => {
+				body[key] = val;
+			});
 
 			postData(new FormData(form))
 				.then(response => {
