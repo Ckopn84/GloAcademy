@@ -70,6 +70,7 @@
 > 11) Добавить папку с третьим уроком в свой репозиторий на GitHub
 > 
 > Примерный результат в консоли:
+> 
 > ![Пример](./Sorce/89072c963c.jpg "Пример")
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson03)
@@ -81,123 +82,124 @@
 > У нас есть переменная namePerson. Если значение этой переменной “Артем” то вывести в консоль “директор”, если значение “Максим” то вывести в консоль “преподаватель”, с любым другим значением вывести в консоль “студент”
 > _Решить задачу с помощью нескольких тернарных операторов, без использования if или switch_
 
-## Урок №4
+## Урок №4. Все о функциях, callback - функции
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson04/lesson04)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson04)
 
-## Урок №5
+## Урок №5. Все о циклах
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson05/lesson05)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson05)
 
-## Урок №6
+## Урок №6. Функции, область видимости и замыкание
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson06/lesson06)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson06)
 
-## Урок №7
+## Урок №7. Знакомимся с объектами и массивами, методы переборов и псевдомассивы
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson7/lesson07)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson07)
 
-## Урок №8
+## Урок №8. Подготовим наш проект для работы со страницей
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson08/lesson08)
 
-## Урок №9
+## Урок №9. Доступ к элементам на странице. DOM, BOM
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson09/lesson09)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson09)
 
-## Урок №10
+## Урок №10. Отладка кода в Dev tools
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson10/lesson10)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson10) | 
 :white_check_mark: [Материалы дополнительного задания на codepen.io](https://codepen.io/ckopn84/pen/vYOBVjw)
 
-## Урок №11
+## Урок №11. Загрузка документа. События в JS. Обработчики событий и особенности их работы.
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson11/lesson11)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson11)
 
-:white_check_mark: [Бонусное задание к уроку 11](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson11bonus)
+## Бонусное задание. Бонусное задание, события и DOM
+:white_check_mark: [Бонусное задание](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson11bonus)
 
-## Урок №12
+## Урок №12. Контекст вызова - this
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson12/lesson12)
 
-## Урок №13
+## Урок №13. localStorage, sessionStorage, cookie
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson13/lesson13)
 
-## Урок №14
+## Урок №14. ООП - Наследование, прототипы, конструкторы и классы
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson14/lesson14) | 
 :white_check_mark: [Материалы основного задания # 2](https://github.com/Ckopn84/GloAcademy/tree/lesson14_2/lesson14_2)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson14)
 
-## Урок №15
+## Урок №15. Особенности современного стандарта ES6 Шаблонные строки,интерполяция, Стрелочные функции, Геттеры, Сеттеры и Классы
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson15/lesson15)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson15)
 
-## Урок №16
+## Урок №16. Доп урок ES6+
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson16/lesson16) | 
 :white_check_mark: [Материалы основного задания # 2](https://github.com/Ckopn84/GloAcademy/tree/lesson16_2/lesson16_2)
 
 :black_square_button: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson16)
 
-## Бонус урок
+## Бонус урок. Способы перебора массива
 :white_check_mark: [НЕОБЯЗАТЕЛЬНОЕ ЗАДАНИЕ](https://codepen.io/ckopn84/pen/dyoMBBm)
 
-## Бонусное задание
+## Бонусное задание. Дополнительная практика
 :white_check_mark: [Задача №1](https://codepen.io/ckopn84/pen/wvaWwgd)
 
 :white_check_mark: [Задача №2](https://codepen.io/ckopn84/pen/wvaWwbm)
 
 :white_check_mark: [Задача №3](https://codepen.io/ckopn84/pen/LYVZYYZ)
 
-## Урок №17
+## Урок №17. Скрипты и время выполнения
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/Lesson17/lesson17) | 
 :white_check_mark: [Материалы основного задания п.6](https://github.com/Ckopn84/GloAcademy/tree/Lesson17/lesson17p6)
 
 :white_check_mark: [Материалы дополнительного задания п.1](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson17p1) | 
 :white_check_mark: [Материалы дополнительного задания п.2](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson17p2)
 
-## Бонусное задание
+## Бонусное задание. Задание setTimeout
 :white_check_mark: [Решение по бонусному заданию](https://codepen.io/ckopn84/pen/eYNzxzM)
 
-## Урок №18
+## Урок №18. Параметры документа, окна и работа с ними
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson18/lesson18)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson18)
 
-## Урок №19
+## Урок №19. Делегирование
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson19/lesson19)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson19)
 
 
-## Урок №20
+## Урок №20. Пишем слайдер с помощью делегирования
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson20/lesson20)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson20)
 
-## Урок №21
+## Урок №21. Работа с атрибутами. Дата Атрибуты Регулярные Выражения
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson21/lesson21)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson21) | 
 :white_check_mark: [Codepen](https://codepen.io/ckopn84/pen/oNXZJmB)
 
-## Урок №22
+## Урок №22. Пишем калькулятор
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson22/lesson22)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson22)
 
-## Урок №23
+## Урок №23. Работа с формами и валидация
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson23/lesson23)
 
 :white_check_mark: [Материалы практики](https://github.com/Ckopn84/GloAcademy/tree/lesson23/lesson23practice)
 
-## Урок №24
+## Урок №24. Работа с JSON, AJAX. Получение и отправка данных на сервер
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson24/lesson24)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson24)
@@ -205,19 +207,19 @@
 ## КОНКУРС ЛУЧШИХ РАБОТ
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/competitionForBestWork/competitionForBestWork)
 
-## Урок №25
+## Урок №25. Асинхронный JavaScript, Promise
 :white_check_mark: [Материалы практики](https://github.com/Ckopn84/GloAcademy/tree/lesson25practice/lesson25practice)
 
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson25/lesson25)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson25)
 
-## Урок №26
+## Урок №26. Fetch
 :white_check_mark: [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson26/lesson26)
 
 :white_check_mark: [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson26)
 
-## Урок №27
+## Урок №27.Приём модуль. Webpack. Babel. Полифилы
 [Материалы основного задания](https://github.com/Ckopn84/GloAcademy/tree/lesson27/lesson27)
 
 [Материалы дополнительного задания](https://github.com/Ckopn84/GloAcademy/tree/hard/hard/lesson27)
