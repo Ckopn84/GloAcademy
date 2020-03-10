@@ -1,11 +1,11 @@
-// eslint-disable-next-line strict
+
 const sendForm = () => {
 	const postData = body => fetch('./server.php', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify(body)
+		body
 	});
 
 	const clearInput = form => {
@@ -35,9 +35,16 @@ const sendForm = () => {
 
 	const processingForm = form => {
 		const statusMessage = document.createElement('div');
+		let interval = 0;
+
+		const clearStatus = () => {
+			statusMessage.textContent = '';
+			clearInterval(interval);
+		};
 
 		const showStatus = status => {
 			const img = document.createElement('img');
+			const showTimeout = 7000;
 			const statusList = {
 				load: {
 					message: ' Загрузка...',
@@ -58,27 +65,30 @@ const sendForm = () => {
 			img.height = 50;
 
 			statusMessage.insertBefore(img, statusMessage.firstChild);
+
+			if (status === 'success' || status === 'error') {
+				interval = setInterval(clearStatus, showTimeout);
+			} else if (interval > 0) clearInterval(interval);
 		};
 
 		statusMessage.style.cssText = 'font-size: 2rem; color: #fff';
 
 		form.addEventListener('submit', event => {
+
 			event.preventDefault();
 
 			showStatus('load');
 
 			form.appendChild(statusMessage);
 
-			postData(Object.fromEntries(new FormData(form)))
+			postData(new FormData(form))
 				.then(response => {
 					if (response.status !== 200) throw new Error(`Status network ${request.status}`);
-
 					showStatus('success');
 					clearInput(form);
 				})
 				.catch(error => {
 					showStatus('error');
-
 					console.error(error);
 				});
 		});

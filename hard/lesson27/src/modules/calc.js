@@ -1,4 +1,4 @@
-// eslint-disable-next-line strict
+
 const calc = (price = 100) => {
 	const calcBlock = document.querySelector('.calc-block'),
 		calcType = document.querySelector('.calc-type'),
@@ -6,12 +6,36 @@ const calc = (price = 100) => {
 		calcDay = document.querySelector('.calc-day'),
 		calcCount = document.querySelector('.calc-count'),
 		totalValue = document.getElementById('total');
+	let interval;
+
+	const animatedCalc = options => {
+		const duration = options.duration || 5000,
+			total = options.total || 0,
+			difference = total - totalValue.textContent,
+			step = (total - totalValue.textContent) / duration;
+		const start = new Date();
+
+		const insertTotalValue = value => totalValue.textContent = value;
+
+		const animated = () => {
+			const newValue = Math.round(difference > 0 ?
+				Math.min(+totalValue.textContent + (new Date() - start) * step, total) :
+				Math.max(+totalValue.textContent + (new Date() - start) * step, total));
+
+			insertTotalValue(newValue);
+
+			if (newValue !== total)
+				interval = requestAnimationFrame(animated);
+		};
+
+		cancelAnimationFrame(interval);
+		interval = requestAnimationFrame(animated);
+	};
 
 	const countSum = () => {
 		let total = 0,
 			counrValue = 1,
-			dayValue = 10,
-			step = 1;
+			dayValue = 10;
 		const typeValue = calcType.options[calcType.selectedIndex].value,
 			squareValue = +calcSquary.value;
 
@@ -29,22 +53,7 @@ const calc = (price = 100) => {
 
 		if (!!typeValue && !!squareValue) {
 			total = price * typeValue * squareValue * counrValue * dayValue;
-		}
-
-		if (+totalValue.textContent !== total) {
-			if (totalValue.textContent > total) {
-				step = -1;
-			}
-
-			const timer = setInterval(() => {
-				totalValue.textContent = +totalValue.textContent + step;
-
-				if ((total - totalValue.textContent) * step < 1) {
-					clearInterval(timer);
-
-					totalValue.textContent = Math.round(total);
-				}
-			}, 0);
+			animatedCalc({ total });
 		}
 	};
 
