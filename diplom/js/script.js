@@ -8,10 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		const closePopup = elem => elem.style.display = 'none';
 
 		const initPopup = classPopup => {
-			const popup = document.querySelector(classPopup),
-				callBtn = document.querySelector('.contacts .call-btn');
+			const popup = document.querySelector(classPopup);
 
-			callBtn.addEventListener('click', () => showPopup(popup));
+			showPopup(popup);
 
 			popup.addEventListener('click', event => {
 				let target = event.target;
@@ -29,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		};
 
 		document.body.addEventListener('click', event => {
+			event.preventDefault();
+
 			const target = event.target;
 
 			if (target.closest('.contacts') && target.classList.contains('call-btn')) initPopup('.popup-call');
