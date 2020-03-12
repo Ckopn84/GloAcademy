@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		const closePopup = elem => elem.style.display = 'none';
 
-		const initPopup = classPopup => {
+		const initPopup = (classPopup, text = '') => {
 			const popup = document.querySelector(classPopup);
 
 			showPopup(popup);
@@ -35,6 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (target.closest('.contacts') && target.classList.contains('call-btn')) initPopup('.popup-call');
 
 			if (target.classList.contains('discount-btn')) initPopup('.popup-discount');
+
+			if (target.classList.contains('check-btn')) initPopup('.popup-check');
+
+			if (target.classList.contains('consultation-btn')) {
+				const inputQuestion = document.querySelector('.director-form input');
+
+				if (inputQuestion.value.trim())
+					initPopup('.popup-consultation', inputQuestion.value.trim());
+			}
 		});
 	};
 	togglePopUp();
