@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			const target = event.target;
 
 			if (target.closest('.contacts') && target.classList.contains('call-btn')) initPopup('.popup-call');
+
+			if (target.classList.contains('discount-btn')) initPopup('.popup-discount');
 		});
 	};
 	togglePopUp();
