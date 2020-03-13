@@ -1,11 +1,11 @@
 
 const togglePopUp = () => {
-	const showPopup = elem => elem.style.display = 'block';
-
-	const closePopup = elem => elem.style.display = 'none';
-
-	const initPopup = (classPopup, text = '') => {
+	const initPopup = (classPopup, data = {}) => {
 		const popup = document.querySelector(classPopup);
+
+		const showPopup = elem => elem.style.display = 'block';
+
+		const closePopup = elem => elem.style.display = 'none';
 
 		showPopup(popup);
 
@@ -58,10 +58,27 @@ const togglePopUp = () => {
 
 			if (inputQuestion.value.trim()) {
 				checkError(inputQuestion);
-				initPopup('.popup-consultation', inputQuestion.value.trim());
+				initPopup('.popup-consultation', { message: inputQuestion.value.trim() });
 			} else {
 				showError(inputQuestion);
 			}
+		}
+
+		if (target.classList.contains('construct-btn')) {
+			const myonoffswitch = document.getElementById('myonoffswitch').checked,
+				distance = document.getElementById('distance').value.trim();
+			const data = {
+				typeSeptic: myonoffswitch ? 1 : 2,
+				diameter: document.getElementById('diameter').value,
+				numberRings: document.getElementById('numberRings').value,
+				diameterTwo: myonoffswitch ? 0 : document.getElementById('diameterTwo').value,
+				numberRingsTwo: myonoffswitch ? 0 : document.getElementById('numberRingsTwo').value,
+				bottom: document.getElementById('myonoffswitch-two').value,
+				distance: distance ? distance : 0,
+				calcResult: document.getElementById('calc-result').value
+			}
+
+			initPopup('.popup-discount', data);
 		}
 	});
 };
