@@ -1,3 +1,17 @@
-<?php 
-sleep (1);
-echo $_SERVER[‘REMOTE_ADDR‘];
+<?php
+//sleep(1); // задержка в 1 сек
+//echo $_SERVER['REMOTE_ADDR']; // возвращаем адрес клиента
+
+// конвертируем данные полученные через POST запрос в виде JSONа в php массив для дальнейшей обработки
+$json = json_decode(file_get_contents('php://input'), true); // в $json будет ассоциативный массив, доступ будет таким $json['user_name']
+
+// можно устанавить заголовок для ответа. этим мы говорим, что это JSON в UTF-8
+// до этого места ничего выводить нельзя! <<---------- !!!
+//header('Content-Type: application/json; charset=utf-8');
+// а после можно :)
+
+// здесь может быть код, который что-то делает с массивом $json
+
+// выводим результат обратно
+// JSON_UNESCAPED_UNICODE нужен, чтобы кириллицу нормально возвращал
+echo json_encode($json, JSON_UNESCAPED_UNICODE); // выводим тот же массив, что получили

@@ -1,0 +1,11 @@
+#oneTank {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+#twoTank {
+	display: none;
+	padding: 0px;
+	margin: 0px;
+}

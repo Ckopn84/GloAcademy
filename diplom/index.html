@@ -16,6 +16,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/mystyle.css" rel="stylesheet">
 
     <title>Септик-погреб</title>
 
@@ -172,41 +173,44 @@
                              aria-labelledby="headingTwo">
                             <div class="panel-body">
 
+                              <dir id="oneTank">
                                 <div class="title-text">первый колодец (приемный)</div>
                                 <div class="select-box">
                                     <p><strong>Диаметр</strong></p>
-                                    <select class="form-control expand">
-                                        <option>1.4 метра</option>
-                                        <option>2 метра</option>
+                                    <select id="diameter" class="form-control expand">
+                                        <option value="1.4">1.4 метра</option>
+                                        <option value="2">2 метра</option>
                                     </select>
                                 </div>
                                 <div class="select-box">
                                     <p><strong>Количество колец</strong></p>
-                                    <select class="form-control expand">
-                                        <option>1 штука</option>
-                                        <option>2 штуки</option>
-                                        <option>3 штуки</option>
+                                    <select id="numberRings" class="form-control expand">
+                                        <option value="1">1 штука</option>
+                                        <option value="2">2 штуки</option>
+                                        <option value="3">3 штуки</option>
                                     </select>
                                 </div>
-
+                              </dir>
+                              <dir id="twoTank">
                                 <div class="title-text">второй колодец (дренажный)</div>
                                 <div class="select-box">
                                     <p><strong>Диаметр</strong></p>
-                                    <select class="form-control expand">
-                                        <option>1.4 метра</option>
-                                        <option>2 метра</option>
+                                    <select id="diameterTwo" class="form-control expand">
+                                        <option value="1.4">1.4 метра</option>
+                                        <option value="2">2 метра</option>
                                     </select>
                                 </div>
                                 <div class="select-box">
                                     <p><strong>Количество колец</strong></p>
-                                    <select class="form-control expand">
-                                        <option>1 штука</option>
-                                        <option>2 штуки</option>
-                                        <option>3 штуки</option>
+                                    <select id="numberRingsTwo" class="form-control expand">
+                                        <option value="1">1 штука</option>
+                                        <option value="2">2 штуки</option>
+                                        <option value="3">3 штуки</option>
                                     </select>
                                 </div>
-                                <a class="button construct-btn" data-toggle="collapse" data-parent="#accordion"
-                                   href="#collapseThree"><span>Следующий шаг</span></a>
+                              </dir>
+                              <a class="button construct-btn" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseThree"><span>Следующий шаг</span></a>
                             </div>
                         </div>
                     </div>
