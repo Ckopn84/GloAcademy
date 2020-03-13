@@ -24,6 +24,24 @@ const togglePopUp = () => {
 		});
 	};
 
+	const showError = elem => {
+		if (elem.nextSibling.id !== 'badInput_' + elem.id) {
+			const div = document.createElement('div');
+
+			div.textContent = 'Необходимо заполнить поле!';
+			div.id = 'badInput_' + elem.id;
+			div.style.color = 'red';
+			elem.parentElement.insertBefore(div, elem.nextSibling);
+			elem.style.cssText = 'border: 2px solid red; ';
+		}
+	};
+
+	const checkError = elem => {
+		elem.style.cssText = '';
+
+		if (elem.nextSibling.id === 'badInput_' + elem.id) elem.nextSibling.remove();
+	}
+
 	document.body.addEventListener('click', event => {
 		event.preventDefault();
 
@@ -38,8 +56,12 @@ const togglePopUp = () => {
 		if (target.classList.contains('consultation-btn')) {
 			const inputQuestion = document.querySelector('.director-form input');
 
-			if (inputQuestion.value.trim())
+			if (inputQuestion.value.trim()) {
+				checkError(inputQuestion);
 				initPopup('.popup-consultation', inputQuestion.value.trim());
+			} else {
+				showError(inputQuestion);
+			}
 		}
 	});
 };
