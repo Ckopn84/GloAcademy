@@ -32,7 +32,7 @@ const togglePopUp = () => {
 			div.id = 'badInput_' + elem.id;
 			div.style.color = 'red';
 			elem.parentElement.insertBefore(div, elem.nextSibling);
-			elem.style.cssText = 'border: 2px solid red; ';
+			elem.style.cssText = 'border: 2px solid red; margin-bottom: 0rem';
 		}
 	};
 
