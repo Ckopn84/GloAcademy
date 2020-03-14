@@ -43,9 +43,11 @@ const togglePopUp = () => {
 	}
 
 	document.body.addEventListener('click', event => {
-		event.preventDefault();
+		// event.preventDefault();
 
 		const target = event.target;
+
+		if (target.type !== 'submit') event.preventDefault();
 
 		if (target.closest('.contacts') && target.classList.contains('call-btn')) initPopup('.popup-call');
 
@@ -64,7 +66,8 @@ const togglePopUp = () => {
 			}
 		}
 
-		if (target.classList.contains('construct-btn')) {
+		if (target.classList.contains('construct-btn') &&
+			target.classList.contains('call-btn')) {
 			const myonoffswitch = document.getElementById('myonoffswitch').checked,
 				distance = document.getElementById('distance').value.trim();
 			const data = {
