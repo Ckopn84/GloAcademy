@@ -13,6 +13,7 @@ const togglePopUp = () => {
 			let target = event.target;
 
 			if (target.classList.contains('popup-close')) {
+				event.preventDefault();
 				closePopup(popup);
 			} else {
 				target = target.closest('.popup-content');
@@ -25,21 +26,22 @@ const togglePopUp = () => {
 	};
 
 	const showError = elem => {
-		if (elem.nextSibling.id !== 'badInput_' + elem.id) {
-			const div = document.createElement('div');
+		// if (elem.nextSibling.id !== 'badInput_' + elem.id) {
+		// 	const div = document.createElement('div');
 
-			div.textContent = 'Необходимо заполнить поле!';
-			div.id = 'badInput_' + elem.id;
-			div.style.color = 'red';
-			elem.parentElement.insertBefore(div, elem.nextSibling);
-			elem.style.cssText = 'border: 2px solid red; margin-bottom: 0rem';
-		}
+		// 	div.textContent = 'Необходимо заполнить поле!';
+		// 	div.id = 'badInput_' + elem.id;
+		// 	div.style.color = 'red';
+		// 	elem.parentElement.insertBefore(div, elem.nextSibling);
+		// 	elem.style.cssText = 'border: 2px solid red; margin-bottom: 0rem';
+		// }
+		elem.style.cssText = 'border: 2px solid red; ';
 	};
 
 	const checkError = elem => {
 		elem.style.cssText = '';
 
-		if (elem.nextSibling.id === 'badInput_' + elem.id) elem.nextSibling.remove();
+		// if (elem.nextSibling.id === 'badInput_' + elem.id) elem.nextSibling.remove();
 	}
 
 	document.body.addEventListener('click', event => {

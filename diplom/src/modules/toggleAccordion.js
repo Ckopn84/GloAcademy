@@ -20,7 +20,7 @@ const toggleAccordion = () => {
 				togglePanel(item);
 			}
 		}
-};
+	};
 
 	document.body.addEventListener('click', event => {
 		let target = event.target;
