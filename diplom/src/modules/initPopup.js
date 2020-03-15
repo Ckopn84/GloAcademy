@@ -4,7 +4,10 @@ import closePopup from './closePopup';
 const initPopup = (classPopup) => {
 	const popup = document.querySelector(classPopup);
 
-	const showPopup = elem => elem.style.display = 'block';
+	const showPopup = elem => {
+		elem.style.display = 'block';
+		document.body.style.overflow = 'hidden'
+	}
 
 	showPopup(popup);
 

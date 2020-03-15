@@ -19,6 +19,7 @@ const closePopup = elem => {
 
 	clearInputs(elem);
 	clearData();
+	document.body.style.overflow = '';
 };
 
 export default closePopup;
