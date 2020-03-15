@@ -1,6 +1,8 @@
 
+import { dataCalc, dataQuestion } from './dataForms';
+
 const togglePopUp = () => {
-	const initPopup = (classPopup, data = {}) => {
+	const initPopup = (classPopup) => {
 		const popup = document.querySelector(classPopup);
 
 		const showPopup = elem => elem.style.display = 'block';
@@ -25,28 +27,11 @@ const togglePopUp = () => {
 		});
 	};
 
-	const showError = elem => {
-		// if (elem.nextSibling.id !== 'badInput_' + elem.id) {
-		// 	const div = document.createElement('div');
+	const showError = elem => elem.style.cssText = 'border: 2px solid red; ';
 
-		// 	div.textContent = 'Необходимо заполнить поле!';
-		// 	div.id = 'badInput_' + elem.id;
-		// 	div.style.color = 'red';
-		// 	elem.parentElement.insertBefore(div, elem.nextSibling);
-		// 	elem.style.cssText = 'border: 2px solid red; margin-bottom: 0rem';
-		// }
-		elem.style.cssText = 'border: 2px solid red; ';
-	};
-
-	const checkError = elem => {
-		elem.style.cssText = '';
-
-		// if (elem.nextSibling.id === 'badInput_' + elem.id) elem.nextSibling.remove();
-	}
+	const removeError = elem => elem.style.cssText = '';
 
 	document.body.addEventListener('click', event => {
-		// event.preventDefault();
-
 		const target = event.target;
 
 		if (target.type !== 'submit') event.preventDefault();
@@ -61,29 +46,29 @@ const togglePopUp = () => {
 			const inputQuestion = document.querySelector('.director-form input');
 
 			if (inputQuestion.value.trim()) {
-				checkError(inputQuestion);
-				initPopup('.popup-consultation', { message: inputQuestion.value.trim() });
-			} else {
-				showError(inputQuestion);
-			}
+				removeError(inputQuestion);
+				dataQuestion.message = inputQuestion.value.trim();
+				initPopup('.popup-consultation');
+				return false;
+			} else showError(inputQuestion);
 		}
 
 		if (target.classList.contains('construct-btn') &&
 			target.classList.contains('call-btn')) {
 			const myonoffswitch = document.getElementById('myonoffswitch').checked,
 				distance = document.getElementById('distance').value.trim();
-			const data = {
-				typeSeptic: myonoffswitch ? 1 : 2,
-				diameter: document.getElementById('diameter').value,
-				numberRings: document.getElementById('numberRings').value,
-				diameterTwo: myonoffswitch ? 0 : document.getElementById('diameterTwo').value,
-				numberRingsTwo: myonoffswitch ? 0 : document.getElementById('numberRingsTwo').value,
-				bottom: document.getElementById('myonoffswitch-two').value,
-				distance: distance ? distance : 0,
-				calcResult: document.getElementById('calc-result').value
-			}
 
-			initPopup('.popup-discount', data);
+			dataCalc.send = true;
+			dataCalc.typeSeptic = myonoffswitch ? 1 : 2;
+			dataCalc.diameter = document.getElementById('diameter').value;
+			dataCalc.numberRings = document.getElementById('numberRings').value;
+			dataCalc.diameterTwo = myonoffswitch ? 0 : document.getElementById('diameterTwo').value;
+			dataCalc.numberRingsTwo = myonoffswitch ? 0 : document.getElementById('numberRingsTwo').value;
+			dataCalc.bottom = document.getElementById('myonoffswitch-two').value;
+			dataCalc.distance = distance ? distance : 0;
+			dataCalc.calcResult = document.getElementById('calc-result').value;
+
+			initPopup('.popup-discount');
 		}
 	});
 };
