@@ -9,3 +9,12 @@
 	padding: 0px;
 	margin: 0px;
 }
+
+#imgStatus {
+	width: 60px;
+}
+
+#pStatus {
+	margin: 20px;
+	font-size: 1.6rem;
+}
