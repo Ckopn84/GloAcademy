@@ -1,12 +1,8 @@
 
 import { dataCalc, dataQuestion } from './dataForms';
-import initPopup from './initPopup'
+import initPopup from './initPopup';
 
 const togglePopUp = () => {
-	const showError = elem => elem.style.cssText = 'border: 2px solid red; ';
-
-	const removeError = elem => elem.style.cssText = '';
-
 	document.body.addEventListener('click', event => {
 		const target = event.target;
 
@@ -22,11 +18,10 @@ const togglePopUp = () => {
 			const inputQuestion = document.querySelector('.director-form input');
 
 			if (inputQuestion.value.trim()) {
-				removeError(inputQuestion);
 				dataQuestion.message = inputQuestion.value.trim();
 				initPopup('.popup-consultation');
 				return false;
-			} else showError(inputQuestion);
+			}
 		}
 
 		if (target.classList.contains('construct-btn') &&
@@ -40,7 +35,7 @@ const togglePopUp = () => {
 			dataCalc.numberRings = document.getElementById('numberRings').value;
 			dataCalc.diameterTwo = myonoffswitch ? 0 : document.getElementById('diameterTwo').value;
 			dataCalc.numberRingsTwo = myonoffswitch ? 0 : document.getElementById('numberRingsTwo').value;
-			dataCalc.bottom = document.getElementById('myonoffswitch-two').value;
+			dataCalc.bottom = document.getElementById('myonoffswitch-two').checked;
 			dataCalc.distance = distance ? distance : 0;
 			dataCalc.calcResult = document.getElementById('calc-result').value;
 
