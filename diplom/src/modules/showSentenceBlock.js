@@ -2,7 +2,6 @@
 const showSentenceBlock = () => {
 	const sentenceRow = document.querySelector('.sentence .row'),
 		addSentenceBtn = document.querySelector('.add-sentence-btn');
-	const blocks = document.querySelectorAll('.shadow-block');
 
 	addSentenceBtn.addEventListener('click', () => {
 		for (const elem of sentenceRow.children) {
