@@ -7,7 +7,19 @@ const togglePopUp = () => {
 
 		const showPopup = elem => elem.style.display = 'block';
 
-		const closePopup = elem => elem.style.display = 'none';
+		const slearInputs = elem => {
+			const inputs = elem.querySelectorAll('input');
+
+			inputs.forEach(item => {
+				if (item.type !== 'button') item.value = '';
+			});
+		};
+
+		const closePopup = elem => {
+			elem.style.display = 'none';
+
+			slearInputs(elem);
+		};
 
 		showPopup(popup);
 
