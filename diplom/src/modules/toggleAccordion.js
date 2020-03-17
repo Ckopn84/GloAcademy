@@ -1,25 +1,22 @@
 
+import animation from './animationAccordion';
+
 const toggleAccordion = () => {
 	const handlingPanel = idElem => {
 		const elem = document.querySelector(idElem),
 			accordion = elem.closest('.panel-group'),
-			parent = elem.closest('.panel-default');
-
-		const togglePanel = (elem, option = '') => {
-			if (!!option) {
-				if (!elem.children[1].classList.contains('in'))
-					elem.children[1].classList.add('in');
-			} else if (elem.children[1].classList.contains('in'))
-				elem.children[1].classList.remove('in');
-		};
+			parent = elem.closest('.panel-default'),
+			elems = {};
 
 		for (const item of accordion.children) {
 			if (item === parent) {
-				togglePanel(item, 'in');
+				if (!item.children[1].classList.contains('in')) elems['show'] = item.children[1];
 			} else {
-				togglePanel(item);
+				if (item.children[1].classList.contains('in')) elems['hide'] = item.children[1];
 			}
 		}
+
+		if (Object.keys(elems).length > 0) animation(elems);
 	};
 
 	document.body.addEventListener('click', event => {
