@@ -35,32 +35,17 @@ const calc = () => {
 
 	const showResult = () => calcResult.value = calculatingCost();
 
-	const handleEvents = event => {
+	constructor.addEventListener('change', event => {
 		const target = event.target;
 
-		if (target.classList.contains('onoffswitch-inner') ||
-		target.classList.contains('onoffswitch-switch')) {
-			event.preventDefault();
-			target.parentElement.previousElementSibling.checked = !target.parentElement.previousElementSibling.checked;
-
-			if (target.parentElement.previousElementSibling.id === 'myonoffswitch')
-				if (target.parentElement.previousElementSibling.checked) {
-					document.getElementById('twoTank').style.display = 'none';
-				} else {
-					document.getElementById('twoTank').style.display = 'block';
-				}
+		if (target.id === 'myonoffswitch') {
+			if (target.checked) {
+				document.getElementById('twoTank').style.display = 'none';
+			} else document.getElementById('twoTank').style.display = 'block';
 		}
 
 		showResult();
-	};
-
-	constructor.addEventListener('click', event => {
-		handleEvents(event);
 	});
-	
-	/* constructor.addEventListener('change', event => {
-		handleEvents(event.target);
-	}); */
 };
 
 export default calc;
