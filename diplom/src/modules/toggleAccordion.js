@@ -30,6 +30,8 @@ const toggleAccordion = () => {
 				target.closest('[href^="#"]').href.replace(/[^#]+(.*)/, '$1') :
 				target.querySelector('a').href.replace(/[^#]+(.*)/, '$1');
 
+			event.preventDefault();
+
 			handlingPanel(hash);
 		}
 	});

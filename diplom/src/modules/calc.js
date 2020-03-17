@@ -35,11 +35,12 @@ const calc = () => {
 
 	const showResult = () => calcResult.value = calculatingCost();
 
-	constructor.addEventListener('click', event => {
+	const handleEvents = event => {
 		const target = event.target;
 
 		if (target.classList.contains('onoffswitch-inner') ||
-			target.classList.contains('onoffswitch-switch')) {
+		target.classList.contains('onoffswitch-switch')) {
+			event.preventDefault();
 			target.parentElement.previousElementSibling.checked = !target.parentElement.previousElementSibling.checked;
 
 			if (target.parentElement.previousElementSibling.id === 'myonoffswitch')
@@ -51,7 +52,15 @@ const calc = () => {
 		}
 
 		showResult();
+	};
+
+	constructor.addEventListener('click', event => {
+		handleEvents(event);
 	});
+	
+	/* constructor.addEventListener('change', event => {
+		handleEvents(event.target);
+	}); */
 };
 
 export default calc;
