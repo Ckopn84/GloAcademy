@@ -5,7 +5,7 @@ const animation = (elems) => {
 		heightShow = 0,
 		heightHide = 0;
 	const start = new Date(),
-		duration = 1000;
+		duration = 300;
 
 	const endAnimate = () => {
 		elems.show.style.cssText = '';
