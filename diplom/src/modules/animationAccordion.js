@@ -32,7 +32,6 @@ const animation = (elems) => {
 	const init = () => {
 		elems.show.classList.add('in');
 		heightShow = elems.show.offsetHeight;
-		console.dir(elems.show);
 		heightHide = elems.hide.offsetHeight;
 		stepShow = heightShow / duration;
 		stepHide = elems.hide.offsetHeight / duration;

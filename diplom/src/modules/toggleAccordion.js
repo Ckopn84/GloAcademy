@@ -10,7 +10,7 @@ const toggleAccordion = () => {
 
 		for (const item of accordion.children) {
 			if (item === parent) {
-				elems['show'] = item.children[1];
+				if (!item.children[1].classList.contains('in')) elems['show'] = item.children[1];
 			} else {
 				if (item.children[1].classList.contains('in')) elems['hide'] = item.children[1];
 			}
